@@ -21,7 +21,14 @@ def getData():
     data = db.newsV2.find({}).limit(20)
     data_to_json = list(data)
     json_data = json.dumps(data_to_json)
-    return json_data, 
+    return json_data, mimetype="application/json" 
+
+@app.get('/test')
+def test():
+    data = db.newsV2.find({}).limit(20)
+    data_to_json = list(data)
+    return data_to_json
+
 
 if __name__=="__main__":
     app.run(debug=True)
