@@ -25,11 +25,12 @@ def getData():
 
 @app.get('/test')
 def test():
-    list = [{'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
+    listl = [{'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
     }, {'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
     }, {'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
     }]
-    return list
+    toj = json.dumps(listl)
+    return toj
 
 
 if __name__=="__main__":
