@@ -13,7 +13,10 @@ cors = CORS(app)
 
 @app.get('/')
 def index():
-    return "hello world"
+    return [{'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
+    }, {'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
+    }, {'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
+    }]
 
 
 @app.get('/getData')
