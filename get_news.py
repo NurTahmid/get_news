@@ -21,8 +21,8 @@ def index():
 def getData():
     data = db.newsV2.find({}).limit(20)
     data_to_json = list(data)
-    json_data = dumps(data_to_json)
-    return json_data
+    json_data = json.dumps(data_to_json)
+    return json_data, 
 
 if __name__=="__main__":
     app.run(debug=True)
