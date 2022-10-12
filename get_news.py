@@ -25,9 +25,11 @@ def getData():
 
 @app.get('/test')
 def test():
-    data = db.newsV2.find({}).limit(20)
-    data_to_json = list(data)
-    return data_to_json
+    list = [{'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
+    }, {'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
+    }, {'id': {'oid':'1'}, 'title': 'lololol', 'date':'212121'
+    }]
+    return list
 
 
 if __name__=="__main__":
